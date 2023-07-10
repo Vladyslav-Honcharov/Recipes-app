@@ -18,6 +18,24 @@ import {
 } from "../../store/api/api";
 import { ImBin, ImPencil, ImFloppyDisk } from "react-icons/im";
 
+import { styled } from "@mui/material/styles";
+
+import Collapse from "@mui/material/Collapse";
+import IconButton from "@mui/material/IconButton";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
 function ItemRecipe({ recipe }) {
   const cardStyle = {
     margin: "16px",
@@ -36,7 +54,14 @@ function ItemRecipe({ recipe }) {
   const [editedRecipe, setEditedRecipe] = useState({
     name: recipe.name,
     description: recipe.description,
+    recipe: recipe.recipe,
+    image: recipe.image,
   });
+
+  const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   const handleDelete = () => {
     removeRecipe(recipe.id);
@@ -47,7 +72,7 @@ function ItemRecipe({ recipe }) {
   };
 
   const handleSave = () => {
-    updateRecipe({ id: recipe.id, ...editedRecipe });
+    updateRecipe.mutate({ id: recipe.id, ...editedRecipe });
     setEditing(false);
   };
 
@@ -110,7 +135,7 @@ function ItemRecipe({ recipe }) {
             color="primary"
             onClick={handleSave}
             sx={{ ml: 2, mr: 2 }}
-            startIcon={<ImFloppyDisk sx={{ fontSize: 4 }} />}
+            startIcon={<ImFloppyDisk sx={{ fontSize: 20 }} />}
           >
             Зберегти
           </Button>
@@ -135,7 +160,21 @@ function ItemRecipe({ recipe }) {
         >
           Видалити
         </Button>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
       </CardContent>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Рецепт:</Typography>
+          <Typography paragraph>{recipe.recipe}</Typography>
+        </CardContent>
+      </Collapse>
     </Card>
   );
 }

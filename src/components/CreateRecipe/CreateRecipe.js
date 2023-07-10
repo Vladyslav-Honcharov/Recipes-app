@@ -9,15 +9,20 @@ function CreateRecipe() {
     name: "",
     image: "",
     description: "",
+    recipe: "",
   });
 
   const [createRecipe] = useCreateRecipesMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!recipe.name || !recipe.description || !recipe.recipe) {
+      alert("Будь ласка заповніть всі поля");
+      return;
+    }
 
     createRecipe(recipe).then(() => {
-      setRecipe({ name: "", image: "", description: "" });
+      setRecipe({ name: "", image: "", description: "", recipe: "" });
     });
   };
 
@@ -53,6 +58,17 @@ function CreateRecipe() {
         placeholder="Опис страви"
         value={recipe.description}
         onChange={(e) => setRecipe({ ...recipe, description: e.target.value })}
+        fullWidth
+        margin="normal"
+        multiline
+        rows={2}
+        sx={{ fontFamily: "Comfortaa, cursive" }}
+      />
+      <TextField
+        label="Рецепт страви"
+        placeholder="Рецепт страви"
+        value={recipe.recipe}
+        onChange={(e) => setRecipe({ ...recipe, recipe: e.target.value })}
         fullWidth
         margin="normal"
         multiline
