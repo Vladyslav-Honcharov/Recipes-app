@@ -16,6 +16,7 @@ import {
   useUpdateRecipeMutation,
   useRemoveRecipeMutation,
 } from "../../store/api/api";
+
 import { ImBin, ImPencil, ImFloppyDisk } from "react-icons/im";
 
 import { styled } from "@mui/material/styles";
@@ -23,7 +24,6 @@ import { styled } from "@mui/material/styles";
 import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -54,8 +54,8 @@ function ItemRecipe({ recipe }) {
   const [editedRecipe, setEditedRecipe] = useState({
     name: recipe.name,
     description: recipe.description,
-    recipe: recipe.recipe,
     image: recipe.image,
+    recipe: recipe.recipe,
   });
 
   const [expanded, setExpanded] = useState(false);
@@ -72,12 +72,12 @@ function ItemRecipe({ recipe }) {
   };
 
   const handleSave = () => {
-    updateRecipe.mutate({ id: recipe.id, ...editedRecipe });
+    updateRecipe({ id: recipe.id, ...editedRecipe });
     setEditing(false);
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, image, recipe } = e.target;
     setEditedRecipe((prevRecipe) => ({
       ...prevRecipe,
       [name]: value,
@@ -103,14 +103,20 @@ function ItemRecipe({ recipe }) {
             />
             <TextField
               name="name"
-              label="Название"
+              label="Назва"
               value={editedRecipe.name}
               onChange={handleChange}
             />
             <TextField
               name="description"
-              label="Описание"
+              label="Опис"
               value={editedRecipe.description}
+              onChange={handleChange}
+            />
+            <TextField
+              name="recipe"
+              label="Рецепт"
+              value={editedRecipe.recipe}
               onChange={handleChange}
             />
           </div>
