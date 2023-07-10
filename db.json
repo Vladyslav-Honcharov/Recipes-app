@@ -1,0 +1,95 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Борщ",
+      "description": "Традиційна українська страва, що складається зі свіжих овочів, м'яса та буряка.",
+      "image": "https://images.unian.net/photos/2022_09/thumb_files/1200_0_1662892107-3846.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Вареники з картоплею",
+      "description": "Традиційна українська страва, яка має форму напівкруглих пиріжків і начинку з картоплі.",
+      "image": "https://ferma-m2.ru/images/shop/recipe_image/crop__4_20.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Голубці з м'ясом",
+      "description": "Традиційна українська страва, представляє собою капустяні рулети з м'ясною начинкою.",
+      "image": "https://rud.ua/uploads/under_recipe/600x300_5f8ee10edd308.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Салат Олів'є",
+      "description": "Популярний український салат, який містить нарізані овочі, яйця, ковбасу та майонез.",
+      "image": "https://jisty.com.ua/wp-content/uploads/2015/08/olivye-1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Картопля по-селянськи",
+      "description": "Смажена картопля з цибулею та спеціями, що нагадує страву селянської кухні.",
+      "image": "https://klopotenko.com/wp-content/uploads/2020/06/Kartofel-po-derevenski-v-dehovke_siteWeb.jpg?v=1593167661"
+    },
+    {
+      "id": 6,
+      "name": "Український блин",
+      "description": "Традиційний український страва, яка приготовлюється з тіста і має різні начинки.",
+      "image": "https://ruwest.ru/upload/iblock/594/5945d62fe8f300980985af0b6fce138a.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Кутя",
+      "description": "Традиційний український різдвяний страва з пшениці, меду, горіхів та сухофруктів.",
+      "image": "https://static.apostrophe.ua/uploads/image/850ebe40c112663af874a876b01adde6.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Сирники",
+      "description": "Популярна українська страва з творогу, яка схожа на маленькі сирні пиріжки.",
+      "image": "https://fayni-recepty.com.ua/wp-content/uploads/2020/01/syrnyky-retsepty.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Млинці з ягодами",
+      "description": "Традиційна українська страва з тонкого тіста, яка начинена свіжими ягодами.",
+      "image": "https://jisty.com.ua/wp-content/uploads/2019/11/Mlintsi-u-plyashtsi.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Бабка",
+      "description": "Український народний десерт, приготовлений з пшеничного тіста та меду.",
+      "image": "https://shefkuhar.com.ua/uploads/posts/2021-03/1616141733_veliikodnja-babka-paska.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Сало",
+      "description": "Традиційний український продукт продовольства, виготовлений з свинячої шкіри та жиру.",
+      "image": "https://aif-s3.aif.ru/images/015/819/e8e2a94949d1a88c72873dedd3ad8d06.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Деруни",
+      "description": "Картопляні пласкі страви, схожі на маленькі картопляні оладки.",
+      "image": "https://smachno.ua/wp-content/uploads/2008/06/20/Depositphotos_58741129_m-2015.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Рататуй",
+      "description": "Страва зі свіжих овочів, таких як баклажан, кабачок, перець та помідори.",
+      "image": "https://s1.eda.ru/StaticContent/Photos/121010154332/150321131715/p_O.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Квас",
+      "description": "Традиційний український напій, виготовлений з бродінням хлібного сусла.",
+      "image": "https://www.opillia.com.ua/wp-content/uploads/2023/05/c2e69bdf-058e-4e63-9177-7fb4efb487d4.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Свіжий сир",
+      "description": "Сир, який виготовляється з молока та має м'яку і кремову консистенцію.",
+      "image": "https://robimosir.cx.ua/wp-content/uploads/2018/10/sde-9.jpg"
+    }
+  ],
+  "users": []
+}
